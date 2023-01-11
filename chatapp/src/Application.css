@@ -1,0 +1,92 @@
+.form{
+    
+    /* background-image: linear-gradient(
+        to right,skyblue,blue,violet
+    ); */
+    background-image: url('./images/pattern2.jpg');
+    background-size:cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    background-color: white;
+    padding: 20px 60px;
+    border: 1px solid;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.app{
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.title{
+    color: red;
+    font-size: 15px;
+}
+
+form{
+    gap: 15px;
+    display:flex;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+input{
+    padding: 15px;
+    width:250px;
+    border:none;
+    border-bottom: 1px solid red;
+}
+
+input[placeholder]{
+    color: rgb(175,175,175);
+}
+
+label{
+    display:flex;
+    align-items: center;
+    color: #8da4f1;
+    font-size: 12px;
+    cursor: pointer;
+    gap:10px;
+}
+
+img{
+    width: 32px;
+
+}
+button{
+    background-color: blueviolet;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.box p{
+    color:darkcyan;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+a{
+    color:darkcyan;
+}
+
+.home {
+    background-color: #a7bcff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
