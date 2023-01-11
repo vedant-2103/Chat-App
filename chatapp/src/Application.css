@@ -44,11 +44,7 @@ input{
     padding: 15px;
     width:250px;
     border:none;
-    border-bottom: 1px solid red;
-}
-
-input[placeholder]{
-    color: rgb(175,175,175);
+    border-bottom: 1px solid blue;
 }
 
 label{
@@ -83,8 +79,9 @@ a{
 }
 
 .Home{
-    /* background-color: #a7bcff; */
-    background-color: rgb(77, 205, 77);
+    background-color: #a7bcff;
+    /* background: linear-gradient(to bottom,#25D366 0%,#25D366 20%,white 50%,white 100%); */
+    /* background-color: rgb(77, 205, 77); */
     height: 100vh;
     display: flex;
     align-items: center;
@@ -149,13 +146,13 @@ button {
     padding: 10px;
 }
 
-input {
+/* input {
     background-color: transparent;
     border: none;
     color: white;
     outline: none;
 
-}
+} */
 .userChat {
     padding: 10px;
     display: flex;
