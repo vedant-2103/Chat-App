@@ -19,7 +19,7 @@ const Login = () => {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate("/login");
+      navigate("/")
     } catch (err) {
       setErr(true);
       // setLoading(false);
@@ -38,8 +38,7 @@ const Login = () => {
           {err && <span>Something went wrong!</span>}
         </form>
         <p>
-          If you don't have an account.
-          <Link to="/register">Register</Link>
+          If you don't have an account.<Link to="/register">Register</Link>
         </p>
       </div>
     </div>
