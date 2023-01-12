@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { AuthContextProvider } from "./context/AuthenticationContext";
-import { ChatContextProvider } from "./context/ChatContext";
+// import { ChatContextProvider } from "./context/ChatContext";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

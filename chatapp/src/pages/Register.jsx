@@ -8,7 +8,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 const Register = () => {
   const [err, setErr] = useState(false);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   // UseNavigate function is used to goto Homepage after successful operation
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ const Register = () => {
   // and stores its current data
   const formHandler = async (e) => {
     e.preventDefault();
-    const username = e.target[0].value;
+    const displayName = e.target[0].value;
     const email = e.target[1].value;
     const password = e.target[2].value;
     const file = e.target[3].files[0];
@@ -28,7 +28,7 @@ const Register = () => {
         email,
         password
       );
-      const storageRef = ref(storage, username);
+      const storageRef = ref(storage, displayName);
       const uploadTask = uploadBytesResumable(storageRef, file);
       uploadTask.on(
         (error) => {
@@ -39,14 +39,14 @@ const Register = () => {
             
             // Updates the profile
             await updateProfile(response.user, {
-              username,
+              displayName,
               photoURL: downloadURL,
             });
 
             // It is used to store user data on Firebase datastore
             await setDoc(doc(db, "users", response.user.uid), {
               uid: response.user.uid,
-              username,
+              displayName,
               email,
               photoURL: downloadURL,
             });
@@ -59,7 +59,7 @@ const Register = () => {
       );
     } catch (err) {
       setErr(true);
-      setLoading(false);
+      // setLoading(false);
     }
   };
 
@@ -72,7 +72,7 @@ const Register = () => {
         {/* Page Name */}
         <span className="title">Register</span>
         <form onSubmit={formHandler}>
-          <input type="text" placeholder="Username" />
+          <input type="text" placeholder="displayName" />
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
           <input style={{ display: "none" }} type="file" id="file" />

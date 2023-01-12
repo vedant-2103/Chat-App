@@ -23,4 +23,3 @@ export const auth = getAuth();
 // For storing the images
 export const storage = getStorage();
 export const db = getFirestore();
-// const analytics = getAnalytics(app);
